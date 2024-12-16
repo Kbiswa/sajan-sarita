@@ -577,7 +577,7 @@ max-width: 400px;
 </b></marquee>
 </div>
 </div><br>
-<audio controls autoplay loop>
+<audio controls loop>
   <source src="images/SMZ vlogger Marriage.mp3">
  
 </audio>
@@ -660,6 +660,14 @@ max-width: 400px;
 
 
 </div>
+<script>
+  window.addEventListener('load', function() {
+      const audio = document.querySelector('audio');
+      audio.play().catch(error => {
+          console.log('Autoplay blocked:', error);
+      });
+  });
+</script>
 
   </body>
 
